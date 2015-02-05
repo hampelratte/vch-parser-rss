@@ -56,7 +56,7 @@ public class RssFeedParser implements IWebParser, ResourceBundleProvider {
 
     private ResourceBundle resourceBundle;
 
-    private ServiceRegistration menuReg;
+    private ServiceRegistration<IWebMenuEntry> menuReg;
 
     public RssFeedParser(BundleContext ctx) {
         this.ctx = ctx;
@@ -163,7 +163,7 @@ public class RssFeedParser implements IWebParser, ResourceBundleProvider {
             open.setLinkUri(entry.getLinkUri());
             childs.add(open);
             entry.setChilds(childs);
-            menuReg = ctx.registerService(IWebMenuEntry.class.getName(), menu, null);
+            menuReg = ctx.registerService(IWebMenuEntry.class, menu, null);
         } catch (Exception e) {
             logger.log(LogService.LOG_ERROR, "Couldn't register rss parser config servlet", e);
         }

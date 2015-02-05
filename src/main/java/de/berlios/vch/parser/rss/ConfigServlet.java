@@ -70,7 +70,7 @@ public class ConfigServlet extends VchHttpServlet {
 
     private BundleContext ctx;
 
-    private ServiceRegistration menuReg;
+    private ServiceRegistration<IWebMenuEntry> menuReg;
 
     public ConfigServlet(BundleContext ctx) {
         this.ctx = ctx;
@@ -210,7 +210,7 @@ public class ConfigServlet extends VchHttpServlet {
         config.setPreferredPosition(Integer.MAX_VALUE);
         childs.add(config);
         entry.setChilds(childs);
-        menuReg = ctx.registerService(IWebMenuEntry.class.getName(), menu, null);
+        menuReg = ctx.registerService(IWebMenuEntry.class, menu, null);
     }
 
     public void addFeed(String title, String uri) {
