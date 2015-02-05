@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iPOJO>
+	<instance component="de.berlios.vch.parser.rss.RssFeedParser" name="vch.parser.rss" />
+    <instance component="de.berlios.vch.parser.rss.ConfigServlet" name="vch.parser.rss.web.servlet.config" />
+</iPOJO>
