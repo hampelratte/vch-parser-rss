@@ -200,7 +200,7 @@ public class ConfigServlet extends VchHttpServlet {
         SortedSet<IWebMenuEntry> childs = new TreeSet<IWebMenuEntry>();
         IWebMenuEntry entry = new WebMenuEntry();
         entry.setTitle(parser.getTitle());
-        entry.setLinkUri("/parser?id=" + getClass().getName());
+        entry.setLinkUri("/parser?id=" + RssFeedParser.class.getName());
         childs.add(entry);
         menu.setChilds(childs);
         childs = new TreeSet<IWebMenuEntry>();
