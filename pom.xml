@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>parser.rss</artifactId>
     <packaging>bundle</packaging>
-    <version>1.0.7</version>
+    <version>1.0.8-SNAPSHOT</version>
     <name>VCH RSS Parser</name>
     <description>Parser for generic RSS feeds. You may add your own feeds, but they have to contain video enclosures.</description>
 
